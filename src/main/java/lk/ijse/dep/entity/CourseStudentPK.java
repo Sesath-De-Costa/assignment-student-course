@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 
@@ -13,13 +14,15 @@ import java.io.Serializable;
  * This file is subject to the terms and conditions defined in
  * file 'LICENSE.txt', which is part of this source code package.
  **/
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Embeddable
-public class Address implements Serializable {
-    private String no;
-    private String addressLine1;
-    private String addressLine2;
-    private String city;
+public class CourseStudentPK implements Serializable {
+    @Column(name = "student_id")
+    private String studentId;
+    @Column(name = "course_id")
+    private String courseId;
+
 }
