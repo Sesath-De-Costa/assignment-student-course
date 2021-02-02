@@ -3,9 +3,8 @@ package lk.ijse.dep.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by Sesath De Costa on 2021-02-01
@@ -43,7 +42,7 @@ public class CourseStudent implements SuperEntity {
         this.registerFee = registerFee;
     }
 
-    public CourseStudent(String courseCode, String studentID, Date registerDate, BigDecimal registerFee) {
+    public CourseStudent(String courseCode, int studentID, Date registerDate, BigDecimal registerFee) {
         this.courseStudentPK = new CourseStudentPK(studentID, courseCode);
         this.registerDate = registerDate;
         this.registerFee = registerFee;

@@ -5,8 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by Sesath De Costa on 2021-02-01
@@ -27,7 +26,7 @@ public class Student implements SuperEntity {
     private String studentName;
     private String gender;
     private String contact;
-    private Date date;
+    private Date dob;
     @Embedded
     private Address address;
 
